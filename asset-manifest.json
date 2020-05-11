@@ -1,7 +1,7 @@
 {
   "main.css": "/react-face-detection/static/css/main.c9b50ef3.chunk.css",
-  "main.js": "/react-face-detection/static/js/main.31b5c544.chunk.js",
-  "main.js.map": "/react-face-detection/static/js/main.31b5c544.chunk.js.map",
+  "main.js": "/react-face-detection/static/js/main.8e80729a.chunk.js",
+  "main.js.map": "/react-face-detection/static/js/main.8e80729a.chunk.js.map",
   "static/js/1.0f49efe6.chunk.js": "/react-face-detection/static/js/1.0f49efe6.chunk.js",
   "static/js/1.0f49efe6.chunk.js.map": "/react-face-detection/static/js/1.0f49efe6.chunk.js.map",
   "runtime~main.js": "/react-face-detection/static/js/runtime~main.ea429f87.js",
@@ -9,6 +9,6 @@
   "static/media/test.jpg": "/react-face-detection/static/media/test.34e86f06.jpg",
   "static/css/main.c9b50ef3.chunk.css.map": "/react-face-detection/static/css/main.c9b50ef3.chunk.css.map",
   "index.html": "/react-face-detection/index.html",
-  "precache-manifest.3778d6fb8723e3c2056161ebb2b2c3e2.js": "/react-face-detection/precache-manifest.3778d6fb8723e3c2056161ebb2b2c3e2.js",
+  "precache-manifest.0aa7f67834fe5506ea8d39c545eaee28.js": "/react-face-detection/precache-manifest.0aa7f67834fe5506ea8d39c545eaee28.js",
   "service-worker.js": "/react-face-detection/service-worker.js"
 }
