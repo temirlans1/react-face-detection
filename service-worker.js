@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/temirlans1/react-face-detection/precache-manifest.c0280466fc226e93a6a755d7bd466fcc.js"
+  "/react-face-detection/precache-manifest.3778d6fb8723e3c2056161ebb2b2c3e2.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/temirlans1/react-face-detection/index.html", {
+workbox.routing.registerNavigationRoute("/react-face-detection/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
