@@ -5,7 +5,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h2>BNK48 Facial Recognition App</h2>
+        <h2>Facial Recognition App</h2>
         <li>
           <Link to="/photo">Photo Input</Link>
         </li>

@@ -1,7 +1,7 @@
 {
   "name": "react-face-recognition",
   "version": "0.1.0",
-  "homepage": "http://supachaic.github.io/react-face-recognition",
+  "homepage": "https://github.com/temirlans1/react-face-detection",
   "private": true,
   "dependencies": {
     "face-api.js": "^0.17.0",

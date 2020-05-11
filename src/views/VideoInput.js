@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Webcam from 'react-webcam';
-import { loadModels, getFullFaceDescription, createMatcher } from '../api/face';
-
-// Import face profile
-const JSON_PROFILE = require('../descriptors/bnk48.json');
+import { loadModels, getFullFaceDescription } from '../api/face';
 
 const WIDTH = 420;
 const HEIGHT = 420;
@@ -17,16 +14,12 @@ class VideoInput extends Component {
     this.state = {
       fullDesc: null,
       detections: null,
-      descriptors: null,
-      faceMatcher: null,
-      match: null,
       facingMode: null
     };
   }
 
   componentWillMount = async () => {
     await loadModels();
-    this.setState({ faceMatcher: await createMatcher(JSON_PROFILE) });
     this.setInputDevice();
   };
 
@@ -66,23 +59,15 @@ class VideoInput extends Component {
       ).then(fullDesc => {
         if (!!fullDesc) {
           this.setState({
-            detections: fullDesc.map(fd => fd.detection),
-            descriptors: fullDesc.map(fd => fd.descriptor)
+            detections: fullDesc.map(fd => fd.detection)
           });
         }
       });
-
-      if (!!this.state.descriptors && !!this.state.faceMatcher) {
-        let match = await this.state.descriptors.map(descriptor =>
-          this.state.faceMatcher.findBestMatch(descriptor)
-        );
-        this.setState({ match });
-      }
     }
   };
 
   render() {
-    const { detections, match, facingMode } = this.state;
+    const { detections, facingMode } = this.state;
     let videoConstraints = null;
     let camera = '';
     if (!!facingMode) {
@@ -117,21 +102,6 @@ class VideoInput extends Component {
                 transform: `translate(${_X}px,${_Y}px)`
               }}
             >
-              {!!match && !!match[i] ? (
-                <p
-                  style={{
-                    backgroundColor: 'blue',
-                    border: 'solid',
-                    borderColor: 'blue',
-                    width: _W,
-                    marginTop: 0,
-                    color: '#fff',
-                    transform: `translate(-3px,${_H}px)`
-                  }}
-                >
-                  {match[i]._label}
-                </p>
-              ) : null}
             </div>
           </div>
         );
